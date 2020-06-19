@@ -1,0 +1,13 @@
+version: "3.2"
+services:
+  my-express:
+    image: my-express:1.0
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 8080:8080
+    # environment: 
+    #   APP_ENV: prod
+    args:
+      APP_ENV: dev
